@@ -1,0 +1,13 @@
+%1
+syms x;
+P = [1 4 -2 -14 -3 -18];
+p1 = poly2sym(P);
+a = roots(P);
+disp((x-a(1))*(x-a(2))*(x-a(3))*(x-a(4))*(x-a(5)));
+disp(factor(p1));
+
+%2
+syms x;
+syms y;
+F=x.^3+x.^2.*y+x.^2-2.*x.*y^2+x.*y-2.*y.^2;
+disp(factor(F));
