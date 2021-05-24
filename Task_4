@@ -1,0 +1,14 @@
+%1
+syms x;
+F = sqrt(1-x^2)/x^2;
+disp(int(F));
+
+%2
+syms x;
+F = 1/(sin(x))^3;
+disp(int(F));
+
+%3
+syms x;
+F = ((sin(2*x)+1)^(1/7))*cos(2*x);
+disp(int(F));
