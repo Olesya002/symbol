@@ -1,0 +1,7 @@
+%1
+syms n;
+disp(symsum(1/(n+1)^2,n,0,inf));
+
+%2
+syms x k;
+disp(symsum(x.^k,k,0,Inf));
