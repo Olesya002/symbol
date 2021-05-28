@@ -3,11 +3,28 @@ syms x;
 f = exp(x);
 a = 0;
 n = 5;
-taylor(f, x, a,'Order',n+1)
+disp(taylor(f, x, 'ExpansionPoint',a,'Order',n+1));
+T = taylor(f, x, a);
+fplot(T,"b",'Linewidth',1);
+grid on
+hold on
+x1 = -5:0.1:5;
+y1 = exp(1).^x1;
+plot(x1,y1,"r",'Linewidth',1);
 
 %2
 syms x;
 f = (sin(x)).^2;
 a = 0;
 n = 10;
-taylor(f, x, 'ExpansionPoint',a,'Order',n+1)
+disp(taylor(f, x, 'ExpansionPoint',a,'Order',n+1));
+T = taylor(f,x,a);
+fplot(T,"b",'Linewidth',1);
+grid on
+hold on
+x1 = -2:0.1:2;
+y1 = (sin(x1)).^2;
+plot(x1,y1,"r",'Linewidth',1);
+
+
+
