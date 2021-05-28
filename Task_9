@@ -1,0 +1,17 @@
+syms u t;
+x = t*cos(u)*cos(u);
+y = t^2*cos(u)*sin(u);
+z = t^3*sin(u);
+x1 = diff(x);
+y1 = diff(y);
+z1 = diff(z);
+x2 = diff(x,2);
+y2 = diff(y,2);
+z2 = diff(z,2);
+x3 = diff(x,3);
+y3 = diff(y,3);
+z3 = diff(z,3);
+kriv = sqrt(det([y1 z1; y2 z2])^2 + det([x1 z1; x2 z2])^2 + det([x1 y1; x2 y2])^2)/(x1^2+y1^2+z1^2)^(3/2);
+kruch = det([x1 y1 z1; x2 y2 z2; x3 y3 z3])/(det([y1 z1; y2 z2])^2 + det([z1 x1; z2 x2])^2 + det([x1 y1; x2 y2])^2);
+simplify(kriv)
+simplify(kruch)
