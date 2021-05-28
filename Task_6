@@ -1,0 +1,13 @@
+%1
+syms x;
+f = exp(x);
+a = 0;
+n = 5;
+taylor(f, x, a,'Order',n+1)
+
+%2
+syms x;
+f = (sin(x)).^2;
+a = 0;
+n = 10;
+taylor(f, x, 'ExpansionPoint',a,'Order',n+1)
