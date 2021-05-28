@@ -1,4 +1,5 @@
-syms u t;
+syms t;
+syms u;
 x = t*cos(u)*cos(u);
 y = t^2*cos(u)*sin(u);
 z = t^3*sin(u);
